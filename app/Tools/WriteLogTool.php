@@ -3,6 +3,7 @@
 namespace App\Tools;
 
 use App\Interfaces\ToolInterface;
+use Illuminate\Support\Facades\Log;
 
 class WriteLogTool extends Tool{
 
@@ -32,6 +33,6 @@ class WriteLogTool extends Tool{
         $username = $arguments[0];
         $score = $arguments[1];
 
-        dd("the username is: " . $username . " and the score is: " . $score);
+        Log::info("the username is: " . $username . " and the score is: " . $score);
     }
 }
